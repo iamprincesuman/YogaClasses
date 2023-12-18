@@ -7,15 +7,18 @@ module.exports = {
         // Assuming req.body contains user data (e.g., name, age, batchId)
         // Basic validation
         console.log(req.body);
-        if (!req.body.name || !req.body.age || !req.body.batchId) {
+        let name = req.body.name;
+        let age = req.body.age;
+        let batchId = req.body.batch;
+        if (!name || !age || !batchId) {
             return errorHandler(res, 400, 'Name, age, and batchId are required.');
         }
 
         // Store data in the database
         const user = {
-            name: req.body.name,
-            age: req.body.age,
-            batchId: req.body.batchId,
+            name: name,
+            age: age,
+            batchId: batchId,
         };
 
         enrollmentModel.enrollParticipant(user, (err, result) => {
@@ -38,8 +41,9 @@ module.exports = {
         // Assuming req.params.participantId and req.body.newBatchId are available
         // if we create an account for them as well, then we can use req.params for the request handling
         // instead of user manually entering the Enroll ID.
-        const participantId = req.body.participantId; 
-        const newBatchId = req.body.newBatchId;
+        
+        const participantId = req.body.enrollmentId; 
+        const newBatchId = req.body.newBatch;
 
         // Basic validation
         if (!participantId || !newBatchId) {
@@ -63,7 +67,7 @@ module.exports = {
 
     makeMonthlyPayment: (req, res) => {
         // Assuming req.body.participantId is available
-        const participantId = req.body.participantId;
+        const participantId = req.body.enrollmentId;
         // Basic validation
         if (!participantId) {
           return errorHandler(res, 400, 'Participant ID is required.');

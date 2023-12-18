@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Batch Change Form</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Batch Change Form</h1>
+    <form id="batchChangeForm">
+        <label for="enrollmentId">Enrollment ID:</label>
+        <input type="text" id="enrollmentId" name="enrollmentId" required>
+
+        <label for="newBatch">New Batch:</label>
+        <select id="newBatch" name="newBatch" required>
+            <option value="6-7AM">6-7AM</option>
+            <option value="7-8AM">7-8AM</option>
+            <option value="8-9AM">8-9AM</option>
+            <option value="5-6PM">5-6PM</option>
+        </select>
+
+        <button type="button" onclick="submitBatchChangeForm()">Submit</button>
+    </form>
+
+    <div class="links">
+        <a href="index.html">Back to Yoga Admission Form</a>
+        <a href="monthly-payment.html">Monthly Payment Form</a>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

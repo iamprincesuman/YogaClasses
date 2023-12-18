@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Monthly Payment Form</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Monthly Payment Form</h1>
+    <form id="monthlyPaymentForm">
+        <label for="enrollmentIdMonthly">Enrollment ID:</label>
+        <input type="text" id="enrollmentIdMonthly" name="enrollmentIdMonthly" required>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" value="500" readonly>
+
+        <button type="button" onclick="submitMonthlyPaymentForm()">Submit</button>
+    </form>
+
+    <div class="links">
+        <a href="index.html">Back to Yoga Admission Form</a>
+        <a href="batch-change.html">Batch Change Form</a>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Yoga Admission Form</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Yoga Admission Form</h1>
+    <form id="yogaForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="18" max="65">
+
+        <label for="batch">Batch:</label>
+        <select id="batch" name="batch" required>
+            <option value="1">6-7AM</option>
+            <option value="2">7-8AM</option>
+            <option value="3">8-9AM</option>
+            <option value="4">5-6PM</option>
+        </select>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div class="links">
+        <a href="batch-change.html">Batch Change Form</a>
+        <a href="monthly-payment.html">Monthly Payment Form</a>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
