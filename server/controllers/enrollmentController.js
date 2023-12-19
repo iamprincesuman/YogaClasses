@@ -26,10 +26,11 @@ module.exports = {
             // Process payment
             const paymentResult = paymentService.processPayment(user);
             // Send response to the front-end based on payment result
+            // console.log(result.insertId);
             if(paymentResult.success) {
                 res.status(200).json({
                     success : true,
-                    message : 'Enrollment succesful'
+                    message : `Enrollment succesful!, Your Enrollment ID is ${result.insertId}`
                 });
             } else {
                 errorHandler(res, 500, 'Payment failed');

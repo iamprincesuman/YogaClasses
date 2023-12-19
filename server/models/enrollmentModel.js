@@ -40,7 +40,6 @@ module.exports = {
           paymentDate: enrollmentDate, // Assuming payment is made on the enrollment date
           amount: 500, // Monthly fee
         };
-
         const paymentSql = 'INSERT INTO payments SET ?';
         db.query(paymentSql, paymentData, (paymentErr, paymentResult) => {
           if (paymentErr) {
